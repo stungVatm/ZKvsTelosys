@@ -1,0 +1,79 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="new page title" border="normal" width="50%"
+		apply="com.sopen.controller.gmail.SendGmail_controller">
+		<grid>
+			<columns>
+				<column label="Type" width="120px" />
+				<column label="Content" />
+				<column label="Component" width="200px" />
+			</columns>
+			<rows>
+				<row>
+					<label value="YourName" width="150px" />
+					<hlayout>
+						<textbox id="txtYourName" width="150px"
+							tabindex="1" />
+					</hlayout>
+					<div>
+						<label sclass="hightlight" id="lblErrorName">
+							Tên của bạn
+						</label>
+					</div>
+				</row>
+				<row>
+					Age:
+					<cell>
+						<intbox id="intBAge" width="150px" tabindex="4" />
+						<label id="lblErrorAge" />
+					</cell>
+					<div>
+						<label sclass="hightlight">Intbox</label>
+						with constraint
+					</div>
+				</row>
+				<row>
+					Phone:
+					<textbox constraint="no empty" id="txtPhone"
+						width="150px"  maxlength="15" tabindex="5" />
+					<div>
+						<label sclass="hightlight">Textbox</label>
+						with max length limit
+					</div>
+				</row>
+				<row>
+					E-mail:
+					<cell>
+						<textbox id="txtBEmail" width="150px"
+							tabindex="9" />
+						<label class="error" id="lblErrorEmail" />
+					</cell>
+					<div>
+						<label sclass="hightlight">Textbox</label>
+						with regexp constraint
+					</div>
+				</row>
+				<row>
+					Memo:
+					<vlayout>
+						<textbox rows="6" id="txtBMemo" width="370px;"
+							tabindex="11" />
+					</vlayout>
+					<div>
+						<label sclass="hightlight">Textbox</label>
+						with multiple rows and
+						<label sclass="hightlight">Spinner</label>
+					</div>
+				</row>
+				<row>
+					<cell colspan="3" style="text-align:center">
+						<vlayout>
+							<button label="Submit" width="100px"
+								height="30px" id="btnSubmit" />
+						</vlayout>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>

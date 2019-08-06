@@ -1,0 +1,40 @@
+<window title="Personal Scoreboard" border="normal"
+	apply="com.sopen.controller.StudentsScoreController"
+	id="wdScoreStudents" width="70%">
+
+	Name:
+	<label id="testRc"></label>
+	<separator></separator>
+	Average:
+	<label id="avgScore"></label>
+	Rank:
+	<label id="lblRank"></label>
+	<separator></separator>
+	<hlayout>
+		<div hflex="2"></div>
+		<button label="Compare" id="btnCompare"></button>
+	</hlayout>
+
+	<listbox id="lstBox">
+		<listhead id="listhead">
+			<listheader hflex="2">STT</listheader>
+			<listheader hflex="2">Subject</listheader>
+			<listheader hflex="2">Factor</listheader>
+			<listheader hflex="2">Score</listheader>
+		</listhead>
+	</listbox>
+
+	<hlayout>
+		<listbox mold="select" id="lstBSub" height="35px">
+
+		</listbox>
+		<doublebox id="txtBScore"></doublebox>
+		<button id="btnSubmit">Submit</button>
+	</hlayout>
+	<vbox width="100%">
+		<button id="btnCancel" style="margin-left:90%"
+			onClick="wdScoreStudents.onClose()">
+			Cancel
+		</button>
+	</vbox>
+</window>

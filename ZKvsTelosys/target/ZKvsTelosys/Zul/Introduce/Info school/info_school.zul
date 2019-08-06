@@ -1,0 +1,43 @@
+<div id="divClasses" apply="com.sopen.controller.UploadController">
+	<hlayout>
+		<div hflex="1" style="border: 3px solid green; padding: 10%">
+			<image width="100%" height="100%" id="imgLogoSchool" src="" />
+			<button id="btnupload" label="Upload Image"
+				upload="true,maxsize=300">
+			</button>
+		</div>
+		<div hflex="3">
+			<html>
+				
+				<![CDATA[ <h1 >Thông tin trường : <spam
+				style="color:red">SOPEN</spam></h1> ]]>
+																							
+			</html>
+			<hlayout>
+				<label>Tổng số học sinh trường :</label>
+				<label id="lblTotalStudents"></label>
+			</hlayout>
+			<hlayout>
+				<label>Tổng số lớp :</label>
+				<label id="lblTotalClasses"></label>
+			</hlayout>
+			<button iconSclass="z-icon-bell z-icon-spin" />
+			<button iconSclass="z-icon-home " />
+			<button iconSclass="z-icon-search-plus"></button>
+		</div>
+	</hlayout>
+	<hlayout>
+		<div>
+			<script type="text/javascript"
+				content="zk.googleAPIkey='MYKEY'" />
+			<gmaps version="3.26" id="gmaps" width="520px"
+				height="400px" showSmallCtrl="true" protocol="https">
+				<ginfo id="info" open="true"
+					content="Hello, &lt;a href=&quot;http://www.zkoss.org\&quot;&gt;ZK&lt;/a&gt;." />
+				<gmarker id="marker" lat="51.508742" lng="-0.120850"
+					open="true"
+					content="Hello, &lt;a href=&quot;http://www.zkoss.org&quot;&gt;ZK&lt;/a&gt; on top of Gmarker." />
+			</gmaps>
+		</div>
+	</hlayout>
+</div>

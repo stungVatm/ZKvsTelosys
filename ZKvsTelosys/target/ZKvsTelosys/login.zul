@@ -1,0 +1,58 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<vlayout xmlns:c="client">
+		<window id="loginWin" title="Login" width="500px" visible="true"
+			minimizable="false" border='normal'
+			onCreate="loginWin.doHighlighted()"
+			apply="com.sopen.controller.login">
+			<style>
+
+				#initBtn { background-color: yellow; } div.minimize {
+				border: 1px solid #79858E; background: #D3E1EC;
+				position: absolute; opacity: 0.8; } div.loginGrid {
+				border: none; } td.loginCtl { text-align: center; }
+				td.loginCtl .z-label { color: red; font-style: italic; }
+			</style>
+			<grid sclass="loginGrid">
+				<columns>
+					<column hflex="1" />
+					<column hflex="2" />
+				</columns>
+				<rows>
+					<row>
+						User Name :
+						<textbox id="name" value="tung123"
+							c:onFocus="this.select()" />
+					</row>
+					<row>
+						Password :
+						<textbox id="pwd" value="tung123"
+							type="password" c:onFocus="this.select()" />
+					</row>
+					<row>
+						<cell sclass="loginCtl" colspan="2">
+							<vlayout>
+								<button label="Submit" id="Submit"
+									width="100px" />
+								<label id="mesg" />
+							</vlayout>
+						</cell>
+					</row>
+				</rows>
+			</grid>
+			<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<zscript><![CDATA[
+//        void loginCheck () {
+//            if ((name.getValue().equals("zk") && pwd.getValue().equals("zk"))) {
+//                mesg.setValue("Dang nhap thanh cong");
+////                Clients.evalJavaScript("zk.Widget.$('$loginWin').setMinimized(true)");
+////                initBtn.getParent().appendChild(new Label("Login Success !! Welcome to ZK Demo!"));
+//            } else {
+//                mesg.setValue("User Name or Password Invalid!");
+////                Clients.evalJavaScript("loginFailed()");
+//            };
+//        }
+        ]]></zscript>
+    </window>   
+</vlayout>
+</zk>

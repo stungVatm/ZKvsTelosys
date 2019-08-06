@@ -1,0 +1,20 @@
+<window title="Them moi mot Class" border="normal"
+	id="wdClassesTreeModel_Detail" apply="com.sopen.controller.ClassesTreeModelDetailController">
+	Nhap thong tin vao day
+	<vbox>
+		<label value="Ten lop" id="labNameClass"></label>
+		<textbox id="txtBNameClass"></textbox>
+		<label value="ID_Parent"></label>
+		<listbox mold="select" id="lstBoxClassesModel">
+
+		</listbox>
+	</vbox>
+	<separator height="20px"></separator>
+	<hbox align="center" width="100%">
+		<button id="btnSave">Save</button>
+		<button id="btnCancel"
+			onClick="wdClassesTreeModel_Detail.onClose()">
+			Cancel
+		</button>
+	</hbox>
+</window>

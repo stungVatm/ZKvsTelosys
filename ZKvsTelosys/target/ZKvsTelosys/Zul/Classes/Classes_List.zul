@@ -1,0 +1,26 @@
+<div apply="com.sopen.controller.ClassesListController"
+	id="divClasses">
+	<button id="btnNew" width="170px">Add New</button>
+	<separator></separator>
+	<hlayout id="hloSearch">
+		<div hflex="5"></div>
+		<checkbox id="cBOpen" label="Open class" checked="true" />
+		<checkbox id="cBClose" label="Close Class" checked="true" />
+		<textbox placeholder="name or note" width="200px"
+			id="tbSearch">
+		</textbox>
+		<button id="btSearch">Search</button>
+	</hlayout>
+	<separator></separator>
+	
+	<listbox id="lstBoxRender" mold="paging" pageSize="5" >
+		<listhead>
+			<listheader>ID</listheader>
+			<listheader>ClassName</listheader>
+			<listheader>Open</listheader>
+			<listheader>Close</listheader>
+			<listheader>Note</listheader>
+			<listheader>Action</listheader>
+		</listhead>
+	</listbox>
+</div>

@@ -1,0 +1,29 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="" border="normal" closable="true" width="600px"
+		id="wdLogoutAdmin">
+		<vlayout>
+			<vbox align="center" width="100%">
+				<label value="${sessionScope.AdminLogin.namead}" />
+				<separator></separator>
+				<label value="Do you want to logout ?" />
+				<separator></separator>
+				<hbox>
+					<button id="btnLogout" onClick="logoutCheck()">
+						Logout
+					</button>
+					<button id="btnCancel"
+						onClick="wdLogoutAdmin.onClose()">
+						Cancel
+					</button>
+				</hbox>
+			</vbox>
+		</vlayout>
+		<zscript><![CDATA[
+	void logoutCheck() {
+		Sessions.getCurrent().removeAttribute("AdminLogin");
+		Executions.sendRedirect("login.zul");
+	}
+]]></zscript>
+	</window>
+</zk>

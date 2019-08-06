@@ -1,0 +1,36 @@
+<window title="Detail Class" border="normal" id="wdClassesDetail"
+	apply="com.sopen.controller.ClassDetailController" width="500px">
+	<vlayout>
+		<label>ClassName:</label>
+		<textbox hflex="2" id="txtbClassName"></textbox>
+		<label style="color : red" id="lbErroName"></label>
+		<label>Time Open:</label>
+		<vlayout>
+			<timebox id="tBOpen" cols="12" format="medium" />
+		</vlayout>
+		<label>Time Close:</label>
+		<vlayout>
+			<timebox id="tBClose" cols="12" format="medium" />
+		</vlayout>
+		<label style="color : red" id="lbErroTime"></label>
+		<label>Note</label>
+		<textbox hflex="2" id="txtNote"></textbox>
+		<hlayout>
+			<radiogroup id="rdoGStt">
+				<radio label="Open" radiogroup="rdoGStt" checked="true" />
+				<radio label="Close" radiogroup="rdoGStt" />
+			</radiogroup>
+		</hlayout>
+		<hbox align="center" width="100%">
+			<button id="btnSave">Save</button>
+			<button id="btnCancel"
+				onClick="wdClassesDetail.onClose()">
+				Cancel
+			</button>
+		</hbox>
+	</vlayout>
+</window>
+
+
+
+

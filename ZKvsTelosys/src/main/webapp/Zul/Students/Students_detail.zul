@@ -1,0 +1,82 @@
+<window title="Detail" border="normal" closable="true" width="900px"
+	id="wdStudentsDetail"
+	apply="com.sopen.controller.StudentsDetailController">
+	<vlayout>
+		<hlayout>
+			<label>Name (6-20 characters)</label>
+			<label style="color: red">*</label>
+			<label>:</label>
+		</hlayout>
+		<textbox hflex="2" id="txtName" maxlength="20"></textbox>
+		<label id="errorName" style="color: red"></label>
+		<hlayout>
+			<label>
+				Code (Need 'st'in the beginning of the code, after that
+				a number VD:st001 and unique )
+			</label>
+			<label style="color: red">*</label>
+			<label>:</label>
+		</hlayout>
+		<hlayout>
+			<textbox hflex="2" id="txtCodest" maxlength="8"></textbox>
+			<button label="Random" id="btnRandom"></button>
+		</hlayout>
+
+		<label id="errorCode" style="color: red"></label>
+		<hlayout>
+			<label>Class</label>
+			<label style="color: red">*</label>
+			<label>:</label>
+		</hlayout>
+
+		<listbox mold="select" id="lstboxClass" width="100%"
+			height="35px">
+
+		</listbox>
+
+		<label id="errorClass" style="color: red"></label>
+
+
+		<label>Address</label>
+		<textbox multiline="true" height="100px" hflex="2"
+			id="txtAddress" maxlength="50">
+		</textbox>
+		<hlayout>
+			<vlayout hflex="1">
+				<hlayout>
+					<label>Email</label>
+					<label style="color: red">*</label>
+					<label>:</label>
+				</hlayout>
+				<textbox hflex="1" id="txtEmail" maxlength="50"></textbox>
+			</vlayout>
+			<vlayout hflex="1">
+				<label>Birthday</label>
+				<datebox id="dbBBirthday" cols="12" format="short " width="100%" />
+			</vlayout>
+		</hlayout>
+
+		<label id="errorEmail" style="color: red"></label>
+		<label>Note</label>
+		<textbox hflex="2" id="txtNote" maxlength="50"></textbox>
+
+		<label>Age</label>
+		<label hflex="2" id="Age"></label>
+		<label id="errorAge" style="color: red"></label>
+		<separator></separator>
+		<hlayout>
+			<label style="color: red">(*)</label>
+			<label>: Don't empty</label>
+		</hlayout>
+		<separator></separator>
+		<hbox align="center" width="100%">
+			<button id="btnSave">Save</button>
+			<button id="btnCancel"
+				onClick="wdStudentsDetail.onClose()">
+				Cancel
+			</button>
+			<div hflex="3"></div>
+			<button id="btnRefresh">Refresh</button>
+		</hbox>
+	</vlayout>
+</window>

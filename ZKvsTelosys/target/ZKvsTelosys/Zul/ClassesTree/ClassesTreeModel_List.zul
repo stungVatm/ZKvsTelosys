@@ -1,0 +1,23 @@
+<div id="divClassesTreeModel"
+	apply="com.sopen.controller.ClassTreeModelController">
+	<div id="divClassesTree">
+		<listbox id="lstBox">
+			<listhead id="listhead">
+				<listheader hflex="2" id="backPage">Back</listheader>
+				<listheader hflex="2" id="lst">ID</listheader>
+				<listheader hflex="2" id="lstSortCodest">
+					NameCl
+				</listheader>
+				<listheader hflex="2" id="lstSortClassId">
+					idParent
+				</listheader>
+				<listheader hflex="2" id="lstSortAge">Next</listheader>
+			</listhead>
+		</listbox>
+	</div>
+	<label>This is a Tree</label>
+	<separator height="20px"></separator>
+	<button id="btnNewRecord" label="Them moi"></button>
+	<separator height="20px"></separator>
+	<div id="showLists"></div>
+</div>

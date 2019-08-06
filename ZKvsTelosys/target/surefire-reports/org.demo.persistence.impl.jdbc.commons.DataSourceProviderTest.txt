@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: org.demo.persistence.impl.jdbc.commons.DataSourceProviderTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec <<< FAILURE!
+org.demo.persistence.impl.jdbc.commons.DataSourceProviderTest.test1JdbcProperties()  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.Error: Unresolved compilation problem: 
+	Test cannot be resolved to a type
+
+	at org.demo.persistence.impl.jdbc.commons.DataSourceProviderTest.test1JdbcProperties(DataSourceProviderTest.java:34)
+
+org.demo.persistence.impl.jdbc.commons.DataSourceProviderTest.test2DataSource()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.Error: Unresolved compilation problems: 
+	Test cannot be resolved to a type
+	Assert cannot be resolved
+
+	at org.demo.persistence.impl.jdbc.commons.DataSourceProviderTest.test2DataSource(DataSourceProviderTest.java:52)
+

@@ -1,0 +1,18 @@
+<div id="divTestZKTreeNote" apply="com.sopen.controller.test.testController">
+	<hlayout height="1000px">
+        <tree id="categoriesTree"  width="100%" >
+            <treecols>
+                <treecol label="Name" />
+                <treecol label="ID" />
+            </treecols>
+            <template name="model">
+                <treeitem>
+                    <treerow>
+                        <treecell label="${each.nameCl}" />
+                        <treecell label="${each.ID}" />
+                    </treerow>
+                </treeitem>
+            </template>
+        </tree>
+    </hlayout>
+</div>

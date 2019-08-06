@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Telosys Database Repository --><root>
+<tableList databaseId="0" databaseName="MYSQL" databaseProductName="MySQL" generation="2019-07-13 16:18:36">
+<table catalog="manage" databaseType="TABLE" javaBean="Admin" name="admin" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="id" javaType="java.lang.Integer" jdbcTypeCode="4" label="Id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="nameAd" dbNotNull="false" dbPosition="2" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="namead" javaType="java.lang.String" jdbcTypeCode="12" label="Namead" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="userAd" dbNotNull="false" dbPosition="3" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="userad" javaType="java.lang.String" jdbcTypeCode="12" label="Userad" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="passAd" dbNotNull="false" dbPosition="4" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="passad" javaType="java.lang.String" jdbcTypeCode="12" label="Passad" maxLength="50" notNull="false" selected="true"/>
+</table>
+<table catalog="manage" databaseType="TABLE" javaBean="Classes" name="classes" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="id" javaType="java.lang.Integer" jdbcTypeCode="4" label="Id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="nameCl" dbNotNull="false" dbPosition="2" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="namecl" javaType="java.lang.String" jdbcTypeCode="12" label="Namecl" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="codeCl" dbNotNull="false" dbPosition="3" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="codecl" javaType="java.lang.String" jdbcTypeCode="12" label="Codecl" maxLength="50" notNull="false" selected="true"/>
+<column dateType="T" dbComment="" dbDefaultValue="" dbName="timeopenCl" dbNotNull="false" dbPosition="4" dbSize="16" dbTypeName="TIME" inputType="time" javaName="timeopencl" javaType="java.util.Date" jdbcTypeCode="92" label="Timeopencl" notNull="false" selected="true"/>
+<column dateType="T" dbComment="" dbDefaultValue="" dbName="timecloseCL" dbNotNull="false" dbPosition="5" dbSize="16" dbTypeName="TIME" inputType="time" javaName="timeclosecl" javaType="java.util.Date" jdbcTypeCode="92" label="Timeclosecl" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="note" dbNotNull="false" dbPosition="6" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="note" javaType="java.lang.String" jdbcTypeCode="12" label="Note" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="stt" dbNotNull="false" dbPosition="7" dbSize="10" dbTypeName="INT" inputType="number" javaName="stt" javaType="java.lang.Integer" jdbcTypeCode="4" label="Stt" notNull="false" selected="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="students_ibfk_1" id="LINK_FK_students_ibfk_1_I" inverseSideOf="LINK_FK_students_ibfk_1_O" javaName="listOfStudents" javaType="java.util.List" joinTableName="" mappedBy="classes" optional="" owningSide="false" sourceTableName="classes" targetEntity="Students" targetTableName="students" used="true"/>
+</table>
+<table catalog="manage" databaseType="TABLE" javaBean="Classestree" name="classestree" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="id" javaType="java.lang.Integer" jdbcTypeCode="4" label="Id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="NameCl" dbNotNull="false" dbPosition="2" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="namecl" javaType="java.lang.String" jdbcTypeCode="12" label="Namecl" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="idPerent" dbNotNull="false" dbPosition="3" dbSize="10" dbTypeName="INT" inputType="number" javaName="idperent" javaType="java.lang.Integer" jdbcTypeCode="4" label="Idperent" notNull="false" selected="true"/>
+<fk name="classestree_ibfk_1">
+<fkcol colname="idPerent" colref="id" deferrable="7" deleterule="3" sequence="1" tablename="classestree" tableref="classestree" updaterule="3"/>
+</fk>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="classestree_ibfk_1" id="LINK_FK_classestree_ibfk_1_I" inverseSideOf="LINK_FK_classestree_ibfk_1_O" javaName="listOfClassestree" javaType="java.util.List" joinTableName="" mappedBy="classestree" optional="" owningSide="false" sourceTableName="classestree" targetEntity="Classestree" targetTableName="classestree" used="true"/>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="classestree_ibfk_1" id="LINK_FK_classestree_ibfk_1_O" inverseSideOf="" javaName="classestree" javaType="Classestree" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="classestree" targetEntity="Classestree" targetTableName="classestree" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="idPerent" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+</table>
+<table catalog="manage" databaseType="TABLE" javaBean="Scores" name="scores" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="id" javaType="java.lang.Integer" jdbcTypeCode="4" label="Id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="studentId" dbNotNull="false" dbPosition="2" dbSize="10" dbTypeName="INT" inputType="number" javaName="studentid" javaType="java.lang.Integer" jdbcTypeCode="4" label="Studentid" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="subjectId" dbNotNull="false" dbPosition="3" dbSize="10" dbTypeName="INT" inputType="number" javaName="subjectid" javaType="java.lang.Integer" jdbcTypeCode="4" label="Subjectid" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="score" dbNotNull="false" dbPosition="4" dbSize="22" dbTypeName="DOUBLE" inputType="number" javaName="score" javaType="java.lang.Double" jdbcTypeCode="8" label="Score" notNull="false" selected="true"/>
+<fk name="scores_ibfk_1">
+<fkcol colname="studentId" colref="id" deferrable="7" deleterule="3" sequence="1" tablename="scores" tableref="students" updaterule="3"/>
+</fk>
+<fk name="scores_ibfk_2">
+<fkcol colname="subjectId" colref="id" deferrable="7" deleterule="3" sequence="1" tablename="scores" tableref="subjects" updaterule="3"/>
+</fk>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="scores_ibfk_1" id="LINK_FK_scores_ibfk_1_O" inverseSideOf="" javaName="students" javaType="Students" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="scores" targetEntity="Students" targetTableName="students" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="studentId" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="scores_ibfk_2" id="LINK_FK_scores_ibfk_2_O" inverseSideOf="" javaName="subjects" javaType="Subjects" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="scores" targetEntity="Subjects" targetTableName="subjects" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="subjectId" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+</table>
+<table catalog="manage" databaseType="TABLE" javaBean="Students" name="students" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="id" javaType="java.lang.Integer" jdbcTypeCode="4" label="Id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="nameSt" dbNotNull="false" dbPosition="2" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="namest" javaType="java.lang.String" jdbcTypeCode="12" label="Namest" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="codeSt" dbNotNull="false" dbPosition="3" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="codest" javaType="java.lang.String" jdbcTypeCode="12" label="Codest" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="classId" dbNotNull="false" dbPosition="4" dbSize="10" dbTypeName="INT" inputType="number" javaName="classid" javaType="java.lang.Integer" jdbcTypeCode="4" label="Classid" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="age" dbNotNull="false" dbPosition="5" dbSize="10" dbTypeName="INT" inputType="number" javaName="age" javaType="java.lang.Integer" jdbcTypeCode="4" label="Age" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="address" dbNotNull="false" dbPosition="6" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="address" javaType="java.lang.String" jdbcTypeCode="12" label="Address" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="phone" dbNotNull="false" dbPosition="7" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="phone" javaType="java.lang.String" jdbcTypeCode="12" label="Phone" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="email" dbNotNull="false" dbPosition="8" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="email" javaType="java.lang.String" jdbcTypeCode="12" label="Email" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="note" dbNotNull="false" dbPosition="9" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="note" javaType="java.lang.String" jdbcTypeCode="12" label="Note" maxLength="50" notNull="false" selected="true"/>
+<column dateType="D" dbComment="" dbDefaultValue="" dbName="birthday" dbNotNull="false" dbPosition="10" dbSize="10" dbTypeName="DATE" inputType="date" javaName="birthday" javaType="java.util.Date" jdbcTypeCode="91" label="Birthday" notNull="false" selected="true"/>
+<fk name="students_ibfk_1">
+<fkcol colname="classId" colref="id" deferrable="7" deleterule="3" sequence="1" tablename="students" tableref="classes" updaterule="3"/>
+</fk>
+<link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="students_ibfk_1" id="LINK_FK_students_ibfk_1_O" inverseSideOf="" javaName="classes" javaType="Classes" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="students" targetEntity="Classes" targetTableName="classes" used="true">
+<joinColumns>
+<joinColumn insertable="false" name="classId" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
+</joinColumns>
+</link>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="scores_ibfk_1" id="LINK_FK_scores_ibfk_1_I" inverseSideOf="LINK_FK_scores_ibfk_1_O" javaName="listOfScores" javaType="java.util.List" joinTableName="" mappedBy="students" optional="" owningSide="false" sourceTableName="students" targetEntity="Scores" targetTableName="scores" used="true"/>
+</table>
+<table catalog="manage" databaseType="TABLE" javaBean="Subjects" name="subjects" schema="">
+<column dbAutoIncremented="true" dbComment="" dbDefaultValue="" dbName="id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="id" javaType="java.lang.Integer" jdbcTypeCode="4" label="Id" notNull="true" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="nameSu" dbNotNull="false" dbPosition="2" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="namesu" javaType="java.lang.String" jdbcTypeCode="12" label="Namesu" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="codeSu" dbNotNull="false" dbPosition="3" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="codesu" javaType="java.lang.String" jdbcTypeCode="12" label="Codesu" maxLength="50" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="factor" dbNotNull="false" dbPosition="4" dbSize="10" dbTypeName="INT" inputType="number" javaName="factor" javaType="java.lang.Integer" jdbcTypeCode="4" label="Factor" notNull="false" selected="true"/>
+<column dbComment="" dbDefaultValue="" dbName="note" dbNotNull="false" dbPosition="5" dbSize="50" dbTypeName="VARCHAR" inputType="text" javaName="note" javaType="java.lang.String" jdbcTypeCode="12" label="Note" maxLength="50" notNull="false" selected="true"/>
+<link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="scores_ibfk_2" id="LINK_FK_scores_ibfk_2_I" inverseSideOf="LINK_FK_scores_ibfk_2_O" javaName="listOfScores" javaType="java.util.List" joinTableName="" mappedBy="subjects" optional="" owningSide="false" sourceTableName="subjects" targetEntity="Scores" targetTableName="scores" used="true"/>
+</table>
+</tableList>
+</root>

@@ -1,0 +1,116 @@
+<div height="100%" id="divStudents"
+	apply="com.sopen.controller.StudentsListController">
+	<button id="btnNew" iconSclass="z-icon-glass">NEW +</button>
+	<separator></separator>
+	<hbox width="100%">
+		<label hflex="2" value="Name"></label>
+		<label hflex="2" value="CodeSt"></label>
+		<label hflex="2" value="ClassID"></label>
+		<label hflex="1" value="Age"></label>
+		<label hflex="4" value="Address"></label>
+		<label hflex="3" value="Email"></label>
+		<label hflex="2" value="Note"></label>
+		<div hflex="2"></div>
+	</hbox>
+
+	<hbox width="100%" id="hboxSearch">
+		<textbox hflex="2" id="txtSearchName" placeholder="Name"></textbox>
+		<textbox hflex="2" id="txtSearchCodeST"
+			placeholder="Code student">
+		</textbox>
+		<listbox hflex="2" mold="select" id="lstClassName"
+			height="35px">
+			<listitem label="ALL" selected="true"></listitem>
+		</listbox>
+		<intbox hflex="1" id="txtSearchAge" placeholder="Age student"></intbox>
+		<textbox hflex="4" id="txtSearchAddress"
+			placeholder="Address student">
+		</textbox>
+		<textbox hflex="3" id="txtSearchEmail"
+			placeholder="Email student">
+		</textbox>
+		<textbox hflex="2" id="txtSearchNote" placeholder="Note"></textbox>
+		<button hflex="1" id="btnSearch" iconSclass="z-icon-search"></button>
+		<button hflex="1" id="btnCleanSearch"
+			iconSclass="z-icon-refresh">
+		</button>
+	</hbox>
+	<separator height="30px"></separator>
+	<hlayout>
+		<label style="color:red;">Lưu ý:</label>
+		<label>
+			Để xem điểm và chọn HS để so sánh - Click vào học sinh đó !
+		</label>
+		<div hflex="4"></div>
+		<vlayout>
+			<label>ID</label>
+			<textbox id="txtIdst1" disabled="true"></textbox>
+		</vlayout>
+		<vlayout>
+			<label>Name</label>
+			<textbox id="txtNamest1" disabled="true"></textbox>
+		</vlayout>
+		<vlayout>
+			<button id="btnComper"
+				iconSclass="z-icon-bell z-icon-spin">
+			</button>
+		</vlayout>
+		<vlayout>
+			<label>ID</label>
+			<textbox id="txtIdst2" disabled="true"></textbox>
+		</vlayout>
+		<vlayout>
+			<label>Name</label>
+			<textbox id="txtNamest2" disabled="true"></textbox>
+		</vlayout>
+
+
+
+	</hlayout>
+
+	<separator></separator>
+	<listbox id="lstBox">
+		<listhead id="listhead">
+			<listheader hflex="2" id="lstSortName">Name</listheader>
+			<listheader hflex="2" id="lstSortCodest">Codest</listheader>
+			<listheader hflex="2" id="lstSortClassId">Class</listheader>
+			<listheader hflex="1" id="lstSortAge">Age</listheader>
+			<listheader hflex="2" id="lstSortAddress">
+				Address
+			</listheader>
+			<listheader hflex="3" id="lstSortEmail">Email</listheader>
+			<listheader hflex="2" id="lstSortNote">Note</listheader>
+			<listheader hflex="2" id="lstSortBirthday">
+				Birthday
+			</listheader>
+			<listheader hflex="2">Action</listheader>
+		</listhead>
+	</listbox>
+	<separator></separator>
+	<separator></separator>
+	<hlayout id="hlayoutNaviPage">
+		<div hflex="11"></div>
+		<button hflex="2" id="firstPage" label="First"></button>
+		<button hflex="2" id="previousPage"
+			iconSclass="z-icon-chevron-left">
+		</button>
+		<intbox hflex="1" value="1" id="numberPage" />
+		<intbox hflex="2" id="totalpage" value="1" readonly="true"
+			style="border:none" />
+		<button hflex="2" id="nextPage"
+			iconSclass="z-icon-chevron-right">
+		</button>
+		<button hflex="2" id="lastPage" label="Last"></button>
+		<div hflex="5">
+			<listbox mold="select" id="numberOfItem">
+				<listitem label="1" />
+				<listitem label="2" />
+				<listitem label="3" />
+				<listitem label="4" selected="true" />
+				<listitem label="5" />
+				<listitem label="6" />
+			</listbox>
+		</div>
+		<div hflex="6" />
+	</hlayout>
+</div>

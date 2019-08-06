@@ -1,0 +1,87 @@
+<window title="Compare" border="normal" id="wdStudentsCompare"
+	width="70%" apply="com.sopen.controller.compare.StudentsCompare">
+	<style>
+		.nav_toolbar .z-toolbarbutton-content i { font-size: 20px;}
+		.nav_tabs .z-tabpanel { padding: 0; border-bottom: 0 none;}
+		.nav_tabs .z-tabpanels .z-toolbarbutton-content { padding: 4px;}
+		.nav_category { cursor:pointer; } .nav_text { color: #696569;
+		font-size : 24px; font-weight: bold;} .center { margin: auto;
+		width: 50%; border: 3px solid green; padding: 10px;
+		text-align:center}
+	</style>
+	<vlayout>
+		<div class="center" width="100%">
+			<hlayout>
+				<label hflex="1" id="lbNameSt1" />
+				<label hflex="1">VS</label>
+				<label hflex="1" id="lbNameSt2"></label>
+			</hlayout>
+			<hlayout class="center">
+				<label hflex="1" id="lbClassSt1"></label>
+				<label hflex="1">Class</label>
+				<label hflex="1" id="lbClassSt2"></label>
+			</hlayout>
+			<hlayout class="center">
+				<label hflex="1" id="lbRankSt1"></label>
+				<label hflex="1">Rank</label>
+				<label hflex="1" id="lbRankSt2"></label>
+			</hlayout>
+			<hlayout class="center">
+				<label hflex="1" id="lbAvgSt1"></label>
+				<label hflex="1">AvgScore</label>
+				<label hflex="1" id="lbAvgSt2"></label>
+			</hlayout>
+			<hlayout class="center">
+				<label hflex="1" id="lbBestSubSt1"></label>
+				<label hflex="1">BestSub</label>
+				<label hflex="1" id="lbBestSubSt2"></label>
+			</hlayout>
+		</div>
+		<hlayout style="margin: auto;" width="100%" height="500px">
+			<tabbox class="center" hflex="3" style="margin : 0"
+				vflex="1">
+				<tabs>
+					<tab label="Table" />
+					<tab label="Bar Chart" />
+				</tabs>
+				<tabpanels>
+					<tabpanel id="tpTable">
+						<hlayout
+							style="border-bottom: 3px solid black">
+							<label hflex="1">Difference</label>
+							<label hflex="1">St1'Score</label>
+							<label hflex="1">Subject</label>
+							<label hflex="1">St1'Score</label>
+							<label hflex="1">Difference</label>
+						</hlayout>
+						<div id="divTableCompare"></div>
+					</tabpanel>
+					<tabpanel id="tpColumn"></tabpanel>
+				</tabpanels>
+			</tabbox>
+			<div hflex="1" vflex="1"
+				style="margin : 0;border : 3px solid green">
+				<div id="divCheckBox"></div>
+				<div>
+					<label style="color: red">Note:</label>
+					<label>
+						Only can compare subject , which both students
+						study
+					</label>
+					<separator></separator>
+					<button id="btnApply">Apply</button>
+				</div>
+			</div>
+
+		</hlayout>
+	</vlayout>
+
+
+	<hbox align="center" width="100%">
+		<div hflex="3"></div>
+		<button id="btnCancel" onClick="wdStudentsCompare.onClose()">
+			Cancel
+		</button>
+
+	</hbox>
+</window>
